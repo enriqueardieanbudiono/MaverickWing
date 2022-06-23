@@ -53,7 +53,7 @@ for (const file of commandFiles) {
 
 client.once('ready', () => {
     console.log('Ready!');
-    client.user.setActivity("Coming Soon", {type: "COMPETING"});
+    client.user.setActivity("YouTube", {type: "LISTENING"});
 });
 
 client.on('interactionCreate', async interaction => {
