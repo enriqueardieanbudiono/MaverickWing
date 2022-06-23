@@ -30,13 +30,7 @@ const embed = new MessageEmbed()
 module.exports = {
     data: new SlashCommandBuilder()
         .setName('help')
-        .setDescription('Replies with a list of commands')
-        .addSubcommand(subcommand => 
-            subcommand
-                .setName('user')
-                .setDescription('Replies with this message')
-                .addUserOption(option => option.setName("target").setDescription("The user to get the information of"))
-        ),
+        .setDescription('Replies with a list of commands'),
     async execute(interaction) {
         const embed = new MessageEmbed()
                     .setColor('#ff0000')
