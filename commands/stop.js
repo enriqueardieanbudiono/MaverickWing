@@ -12,7 +12,7 @@ module.exports = {
         if(!isConnected) return interaction.reply({ content: 'I am not connected to a voice channel.', ephemeral: true });
 
         /* Checking if there is music playing. If there isn't, return. */
-        const queue = music.queue({
+        const queue = music.getQueue({
             interaction: interaction
         });
         if(queue.length === 0) return interaction.reply({ content: 'There is no music playing.', ephemeral: true });
@@ -20,5 +20,7 @@ module.exports = {
         music.stop({
             interaction: interaction
         });
+
+        interaction.reply({ content: `The Song has been stopped.`});
     },
 };

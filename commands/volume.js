@@ -22,7 +22,7 @@ module.exports = {
         });
         if(!isConnected) return interaction.reply({ content: 'I am not connected to a voice channel.', ephemeral: true });
 
-        music.setVolume({
+        music.volume({
             interaction: interaction,
             volume: volume
         });
