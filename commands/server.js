@@ -1,4 +1,5 @@
 const { SlashCommandBuilder } = require('@discordjs/builders');
+const { MessageEmbed } = require('discord.js');
 
 module.exports = {
     data: new SlashCommandBuilder()
@@ -12,10 +13,11 @@ module.exports = {
             .setThumbnail('https://i.imgur.com/uTTspNt.png')
             .setDescription('This is an info about the server\n\n')
             .addFields(
-                { name: 'Name', value: `${interaction.guild.name}` },
-                { name: 'ID', value: `${interaction.guild.id}` },
-                { name: 'Owner', value: `${interaction.guild.owner.user.tag}` },
-                { name: 'Owner ID', value: `${interaction.guild.owner.user.id}` },
+                { name: 'Name', value: `${interaction.guild.name}`, inline: true },
+                { name: 'ID', value: `${interaction.guild.id}`, inline: true },
+                {name : '\u200b', value: '\u200b', inline: false},
+                { name: 'Owner', value: `<@${interaction.guild.ownerId}>`,inline: true },
+                { name: 'Owner ID', value: `${interaction.guild.ownerId}`, inline: true },
                 { name: 'Created', value: `${interaction.guild.createdAt}` },
                 { name: 'Members', value: `${interaction.guild.memberCount}` },
                 { name: 'Channels', value: `${interaction.guild.channels.cache.size}` },
