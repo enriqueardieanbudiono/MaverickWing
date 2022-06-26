@@ -16,6 +16,7 @@ module.exports = {
                     { name: 'Username', value: `${interaction.user.tag}`},
                     { name: 'ID', value: `${interaction.user.id}` },
                     { name: 'Created', value: `${interaction.user.createdAt}` },
+                    { name: 'Joined', value: `${interaction.guild.joinedAt}` },
                 )
                 .setImage(`${interaction.user.avatarURL({ format: 'png', dynamic: true, size: 1024 })}`)
                 .setTimestamp()
