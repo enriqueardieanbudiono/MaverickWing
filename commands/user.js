@@ -23,7 +23,3 @@ module.exports = {
     await interaction.reply({ embeds: [embed] });
     },
 };
-/*
-await interaction.reply(`User name: ${interaction.user.tag}\nUser ID: ${interaction.user.id}\nUser Bot: ${interaction.user.bot}`);
-    console.log(`${interaction.user.createdAt}`);
-}, */

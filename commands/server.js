@@ -30,6 +30,3 @@ module.exports = {
         await interaction.reply({ embeds: [embed] });
     },
 };
-/*
-await interaction.reply(`Server name: ${interaction.guild.name}\nTotal members: ${interaction.guild.memberCount}`);
-    }, */
